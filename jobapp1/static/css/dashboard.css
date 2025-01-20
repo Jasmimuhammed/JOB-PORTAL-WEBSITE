@@ -1,0 +1,80 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container for page content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Page Header */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* Job Section Header */
+h3 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
+    font-size: 18px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Applied Jobs Section Styling */
+ul {
+    margin-top: 30px;
+}
+
+/* Logout Link */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    text-decoration: none;
+    color: #f44336;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

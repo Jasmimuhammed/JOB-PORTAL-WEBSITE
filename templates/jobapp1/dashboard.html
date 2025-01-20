@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Dashboard</title>
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <h2>Job Dashboard</h2>
+    <h3>Available Jobs</h3>
+    <ul>
+        {% for job in jobs %}
+            <li>
+                <strong>{{ job.title }}</strong><br>
+                {{ job.company }} - {{ job.location }}<br>
+                {{ job.description }}<br>
+                <a href="{% url 'apply_for_job' job.id %}">Apply for this job</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Your Applied Jobs</h3>
+    <ul>
+        {% for applied_job in applied_jobs %}
+            <li>
+                {{ applied_job.job.title }} - Applied on: {{ applied_job.applied_on }}
+                <a href="{% url 'delete_applied_job' applied_job.id %}">Delete Application</a>
+            </li>
+        {% empty %}
+            <li>No jobs applied yet.</li>
+        {% endfor %}
+    </ul>
+
+    
+
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+
+</body>
+</html>
